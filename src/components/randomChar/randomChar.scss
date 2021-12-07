@@ -1,0 +1,71 @@
+@import '../../style/variables.scss';
+
+.randomchar {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    align-items: center;
+
+    &__block {
+        padding: 40px 35px;
+        display: grid;
+        grid-template-columns: 180px auto;
+        column-gap: 30px;
+    }
+    &__img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 3px;
+    }
+    &__name {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 29px;
+        text-transform: uppercase;
+    }
+    &__descr {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 10px;
+        margin-bottom: auto;
+        -webkit-line-clamp: 5;
+        height: auto;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    &__btns {
+        a:nth-child(1) {
+            margin-right: 30px;
+        }
+    }
+    &__static {
+        padding: 40px 35px;
+        background-color: $dark;
+        position: relative;
+        button {
+            margin-top: 13px;
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.045em;
+        color: #FFFFFF;
+        &:nth-child(2) {
+            margin-top: 33px;
+        }
+    }
+    &__decoration {
+        position: absolute;
+        bottom: 14px;
+        right: -37px;
+    }
+}
